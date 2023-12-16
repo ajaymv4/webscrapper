@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.dpr.utilities.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.583 s <<< FAILURE! - in com.dpr.utilities.AppTest
+testHello{CapturedOutput}  Time elapsed: 0.573 s  <<< ERROR!
+java.lang.NoSuchMethodError: 'java.lang.String org.apache.commons.lang3.StringUtils.toRootLowerCase(java.lang.String)'
+	at com.dpr.utilities.AppTest.testHello(AppTest.java:15)
+
