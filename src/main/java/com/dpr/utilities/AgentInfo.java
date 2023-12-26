@@ -9,10 +9,29 @@ public class AgentInfo {
     private String allLinksToQuery;
     private String emailId;
     private String manager;
+    private String phoneNumber;
     private String companyName;
-
     private String officeId;
-    private String isAgent;
+    private boolean isAgent;
+    private String exception;
+
+    public String getException() {
+        return exception;
+    }
+
+    public AgentInfo setException(String exception) {
+        this.exception = String.format("Exception, verify again - %s", exception);
+        return this;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public AgentInfo setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
 
     public String getOfficeId() {
         return officeId;
@@ -22,12 +41,12 @@ public class AgentInfo {
         this.officeId = officeId;
     }
 
-    public String getIsAgent() {
+    public boolean isAgent() {
         return isAgent;
     }
 
-    public void setIsAgent(String isAgent) {
-        this.isAgent = isAgent;
+    public void setAgent(boolean agent) {
+        isAgent = agent;
     }
 
     public String getAgentName() {
@@ -85,9 +104,11 @@ public class AgentInfo {
         joiner.add(agentId);
         joiner.add(allLinksToQuery);
         joiner.add(emailId);
+        joiner.add(phoneNumber);
         joiner.add(companyName);
         joiner.add(officeId);
-        joiner.add(isAgent);
+        joiner.add(isAgent?"Y":"N");
+        joiner.add(exception);
         return joiner.toString();
     }
 }
